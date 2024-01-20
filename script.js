@@ -7,13 +7,14 @@ btn.addEventListener('click',()=>{
     newItem.innerHTML=inp.value;
     ulContent.appendChild(newItem);
 
-    let span=document.createElement("span");
-    span.innerHTML = `<img class="cross" src='./close.png' alt='close' width=20px />`;
+    let span=document.createElement("button");
+    span.id='delete'
+    span.innerHTML = `Delete`;
     newItem.appendChild(span);
     ulContent.appendChild(newItem);
 
     inp.value = "";
-    span.querySelector('.cross').addEventListener('click', () => {
+    span.addEventListener('click', () => {
         newItem.remove();
     });
 })
