@@ -7,16 +7,20 @@ btn.addEventListener('click',()=>{
     newItem.innerHTML=inp.value;
     ulContent.appendChild(newItem);
 
-    let span=document.createElement("button");
-    span.id='delete'
-    span.innerHTML = `Delete`;
-    newItem.appendChild(span);
-    ulContent.appendChild(newItem);
+    let del=document.createElement("button");
+    del.id='delete';
+    del.innerHTML = `Delete`;
+    newItem.appendChild(del);
 
     inp.value = "";
-    span.addEventListener('click', () => {
+    del.addEventListener('click', () => {
         newItem.remove();
     });
+
+    edit.addEventListener('click',()=>{
+        let a =newItem.innerHTML;
+        console.log(a);
+    })
 })
 
 

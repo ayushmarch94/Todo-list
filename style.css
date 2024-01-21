@@ -55,13 +55,7 @@ li{
     padding: 2px;
     display: flex;
     justify-content: space-between;
-}
-
-ul li span {
-    position: absolute;
-    right: 5px; 
-    top: 50%;
-    transform: translateY(-50%);
+    overflow: hidden;
 }
 
 .cross:hover{
@@ -77,4 +71,5 @@ ul li span {
     background-color: rgb(255, 35, 97);
     color: white;
     cursor: pointer;
+    width: 100px;
 }
